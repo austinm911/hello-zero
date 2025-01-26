@@ -1,0 +1,127 @@
+{
+	"id": "1c54ab68-ff83-41ed-8b53-5d7d21144e8a",
+	"prevId": "00000000-0000-0000-0000-000000000000",
+	"version": "7",
+	"dialect": "postgresql",
+	"tables": {
+		"public.todo": {
+			"name": "todo",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "varchar(255)",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"description": {
+					"name": "description",
+					"type": "varchar(255)",
+					"primaryKey": false,
+					"notNull": true
+				},
+				"completed": {
+					"name": "completed",
+					"type": "boolean",
+					"primaryKey": false,
+					"notNull": true,
+					"default": false
+				},
+				"created_at": {
+					"name": "created_at",
+					"type": "timestamp",
+					"primaryKey": false,
+					"notNull": false
+				},
+				"updated_at": {
+					"name": "updated_at",
+					"type": "timestamp",
+					"primaryKey": false,
+					"notNull": false
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		},
+		"public.users": {
+			"name": "users",
+			"schema": "",
+			"columns": {
+				"id": {
+					"name": "id",
+					"type": "varchar(255)",
+					"primaryKey": true,
+					"notNull": true
+				},
+				"name": {
+					"name": "name",
+					"type": "varchar(255)",
+					"primaryKey": false,
+					"notNull": true
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {},
+			"isRLSEnabled": false
+		},
+		"zero.schemaVersions": {
+			"name": "schemaVersions",
+			"schema": "zero",
+			"columns": {
+				"minSupportedVersion": {
+					"name": "minSupportedVersion",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": false
+				},
+				"maxSupportedVersion": {
+					"name": "maxSupportedVersion",
+					"type": "integer",
+					"primaryKey": false,
+					"notNull": false
+				},
+				"lock": {
+					"name": "lock",
+					"type": "boolean",
+					"primaryKey": true,
+					"notNull": true,
+					"default": true
+				}
+			},
+			"indexes": {},
+			"foreignKeys": {},
+			"compositePrimaryKeys": {},
+			"uniqueConstraints": {},
+			"policies": {},
+			"checkConstraints": {
+				"zero_schema_versions_single_row_constraint": {
+					"name": "zero_schema_versions_single_row_constraint",
+					"value": "\"zero\".\"schemaVersions\".\"lock\""
+				}
+			},
+			"isRLSEnabled": false
+		}
+	},
+	"enums": {},
+	"schemas": {
+		"zero": "zero"
+	},
+	"sequences": {},
+	"roles": {},
+	"policies": {},
+	"views": {},
+	"_meta": {
+		"columns": {},
+		"schemas": {},
+		"tables": {}
+	}
+}

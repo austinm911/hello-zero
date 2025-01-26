@@ -1,0 +1,36 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Default",
+	"compilerOptions": {
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+
+		"target": "ES2022",
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"esModuleInterop": true,
+		"incremental": false,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"lib": ["es2022", "DOM", "DOM.Iterable"],
+		"jsx": "preserve",
+
+		"module": "Preserve",
+		"noEmit": true,
+
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"exactOptionalPropertyTypes": true
+	},
+	"exclude": ["node_modules", "dist"]
+}
